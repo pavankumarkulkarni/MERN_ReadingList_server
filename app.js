@@ -27,6 +27,5 @@ const server = new ApolloServer({
 
 const app = express();
 server.applyMiddleware({ app });
-app.listen(5000, () =>
-  console.info("Application is running at localhost:5000")
-);
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.info(`Application is running at ${port}`));
